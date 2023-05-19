@@ -1,22 +1,15 @@
-let today = new Date();
-const birthday = new Date("2023-05-25"); // 생일 날짜를 자신의 생일로 변경해주세요.
-
-    if(today.getMonth() == birthday.getMonth() && today.getDate() == birthday.getDate()) {
+	const birthday = new Date("2023-05-25"); // 생일 날짜
+	let today = new Date();
+    // if(today.getMonth() == birthday.getMonth() && today.getDate() == birthday.getDate()) {
 
 	const songButton = document.getElementById("songButton");
 	const letter = document.querySelector(".letter");
-	const letterContent = document.querySelector(".letterContent");
-	let isOpen = false;
-
-	songButton.style.display = "block";
-	songButton.style.margin = "0 auto";
-	
-	
-	
-	let audio = new Audio("birthdaySong.mp3"); // 생일 축하 노래 파일 경로를 변경해주세요.
+		
+	let audio = new Audio("audio/birthdaySong.mp3"); // 생일 축하 노래 파일 경로
 
 	songButton.onclick = function() {
 		if(audio.paused){
+			audio.currentTime = 0;
 			audio.play();
 			letter.classList.add("open");
 		} else {
@@ -25,13 +18,15 @@ const birthday = new Date("2023-05-25"); // 생일 날짜를 자신의 생일로
 		}
 		
 	};
-    } else {
- 		songButton.onclick = function () {
- 			alert("아직 날짜가 맞지 않아 볼 수 없습니다.");
- 		}
-}	
+//     } else {
+//  		songButton.onclick = function () {
+//  			alert("아직 날짜가 맞지 않아 볼 수 없습니다.");
+//  		}
+// }	
 
 function countdown() {
+	const birthday = new Date("2023-05-25"); // 생일 날짜
+	let today = new Date();
 
 	let diff = (birthday - today) / 1000; // 초 단위로 시간 차이 계산
 

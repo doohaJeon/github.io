@@ -18,7 +18,9 @@ body {
 	.remainBirth {
 		margin: 0;
 	}
+
 }
+
 /* 카운트 다운 */
 .remainBirth {
 	font-size: 3rem;
@@ -87,6 +89,9 @@ body {
 	transform: scale(1);
 }
 
+.containerButton .letter.open .letterContent img {
+	height: 425px;
+}
 
 .containerButton .letter-button {
 	position: absolute;
